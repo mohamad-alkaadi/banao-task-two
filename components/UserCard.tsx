@@ -3,19 +3,11 @@ import React from "react"
 import { Box } from "@mui/material"
 import Image from "next/image"
 import unknown from "../public/assets/unknown.png"
+import Link from "next/link"
 
 const UserCard = ({ user }: { user: React.ReactDOM }) => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        my: "5px",
-        p: 2,
-        "&:hover": {
-          bgcolor: "#383838",
-        },
-      }}
-    >
+    <Link className="flex my-[5px] p-2 hover:bg-[#383838]" href={`/${user.id}`}>
       <Box
         sx={{
           display: "flex",
@@ -43,7 +35,7 @@ const UserCard = ({ user }: { user: React.ReactDOM }) => {
         <h2 className="text-[16px] font-[600]">{`${user.profile.firstName} ${user.profile.lastName}`}</h2>
         <p className="text-[12px]">{user.jobTitle}</p>
       </Box>
-    </Box>
+    </Link>
   )
 }
 

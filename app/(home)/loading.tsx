@@ -1,7 +1,8 @@
 import React from "react"
 import { Box } from "@mui/material"
+import CircularProgress from "@mui/material/CircularProgress"
 
-export default function Home() {
+const loader = () => {
   return (
     <Box
       sx={{
@@ -10,9 +11,12 @@ export default function Home() {
         alignItems: "center",
         height: "100vh",
         fontSize: "30px",
+        flexDirection: "column",
       }}
     >
-      UserDB
+      <CircularProgress />
     </Box>
   )
 }
+
+export default loader

@@ -3,6 +3,7 @@ import { Box, Grid } from "@mui/material"
 import { getUsers } from "../api/users"
 import Image from "next/image"
 import UserCard from "./UserCard"
+
 export default async function UsersList() {
   const users = await getUsers()
   return (

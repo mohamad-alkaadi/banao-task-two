@@ -1,7 +1,8 @@
+"use client"
 import React from "react"
 import { Box } from "@mui/material"
 
-export default function Home() {
+const error = () => {
   return (
     <Box
       sx={{
@@ -10,9 +11,12 @@ export default function Home() {
         alignItems: "center",
         height: "100vh",
         fontSize: "30px",
+        flexDirection: "column",
       }}
     >
-      UserDB
+      No data to show
     </Box>
   )
 }
+
+export default error
