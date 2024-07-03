@@ -12,6 +12,7 @@ type User = {
     email: string
   }
   id: string
+  map: any
 }
 
 function sleep(ms: number) {

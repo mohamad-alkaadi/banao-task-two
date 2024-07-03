@@ -13,7 +13,7 @@ export default async function UsersList() {
         overflow: "auto",
       }}
     >
-      {users.map((user) => (
+      {users.map((user: any) => (
         <UserCard user={user} key={user.id} />
       ))}
     </Box>
