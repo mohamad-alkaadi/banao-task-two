@@ -27,7 +27,6 @@ export default async function UserPage({
         height={120}
       />
       <div>
-        {/* <p className="text-[#b9b9b9]">Name:</p> */}
         <p className="text-white text-[20px] font-[500] mb-3">
           {user.profile.firstName} {user.profile.lastName}
         </p>
@@ -54,28 +53,6 @@ export default async function UserPage({
         <p className="text-[#b9b9b9] text-[15px]">Bio:</p>
         <p className="text-white text-[16px] font-[500] mb-3">{user.Bio}</p>
       </div>
-      {/* <div>
-        Name:{" "}
-        <span className="">
-          {user.profile.firstName} {user.profile.lastName}
-        </span>
-      </div>
-      <div>
-        {" "}
-        Username: <span className="">{user.profile.username}</span>
-      </div>
-      <div>
-        {" "}
-        Email: <span className="">{user.profile.email}</span>
-      </div>
-      <div>
-        {" "}
-        Job: <span className="">{user.jobTitle}</span>
-      </div>
-      <div>
-        {" "}
-        Bio: <span className="">{user.Bio}</span>
-      </div> */}
     </Box>
   )
 }

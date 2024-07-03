@@ -6,7 +6,7 @@ import unknown from "../public/assets/unknown.png"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-const UserCard = ({ user }: { user: React.ReactDOM }) => {
+const UserCard = ({ user }: { user: any }) => {
   const pathname = usePathname()
   const newPath = pathname.replace("/", "")
   console.log(newPath)
