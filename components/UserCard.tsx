@@ -4,10 +4,21 @@ import { Box } from "@mui/material"
 import Image from "next/image"
 import unknown from "../public/assets/unknown.png"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const UserCard = ({ user }: { user: React.ReactDOM }) => {
+  const pathname = usePathname()
+  const newPath = pathname.replace("/", "")
+  console.log(newPath)
   return (
-    <Link className="flex my-[5px] p-2 hover:bg-[#383838]" href={`/${user.id}`}>
+    <Link
+      className={`flex my-[5px] p-2  ${
+        newPath === user.id
+          ? "bg-[#454545] hover:bg-[#515151]"
+          : "hover:bg-[#383838]"
+      }`}
+      href={`/${user.id}`}
+    >
       <Box
         sx={{
           display: "flex",
@@ -20,7 +31,7 @@ const UserCard = ({ user }: { user: React.ReactDOM }) => {
           alt={user.profile.firstName}
           width={60}
           height={60}
-          className="bg-[#454545] rounded-full"
+          className="bg-[#636363] rounded-full"
         />
       </Box>
       <Box

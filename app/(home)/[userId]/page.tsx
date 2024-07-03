@@ -20,7 +20,7 @@ export default async function UserPage({
       }}
     >
       <Image
-        className="bg-[#454545] rounded-full mb-3"
+        className="bg-[#636363] rounded-full mb-3"
         src={unknown}
         alt="unknown"
         width={120}
